@@ -1,0 +1,4140 @@
+{
+  "id": "926ec988-5dc8-4035-8139-3c29325721a4",
+  "revision": 0,
+  "last_node_id": 4033,
+  "last_link_id": 90,
+  "nodes": [
+    {
+      "id": 401,
+      "type": "UNETLoader",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        420,
+        84
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "unet_name",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "weight_dtype",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            89
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "SDFlux\\minimax\\MiniMax-H3-Ref2VA-pruned_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "SDFlux\\minimax\\MiniMax-H3-Ref2VA-pruned_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 398,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        188
+      ],
+      "size": [
+        420,
+        108
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip_name",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "type",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            7,
+            51,
+            78
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "type": "minimax",
+        "device": "default"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 399,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        400
+      ],
+      "size": [
+        420,
+        60
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "vae_name",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8,
+            30,
+            52,
+            79
+          ]
+        }
+      ],
+      "title": "H3 Video VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_int8_convrot.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 400,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        564
+      ],
+      "size": [
+        420,
+        60
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "vae_name",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            9,
+            32,
+            53
+          ]
+        }
+      ],
+      "title": "H3 Audio VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 2001,
+      "type": "MiniMaxChunkFeedForward",
+      "pos": [
+        523.0356153571779,
+        139.60795027661436
+      ],
+      "size": [
+        320,
+        82
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 90
+        },
+        {
+          "localized_name": "chunks",
+          "name": "chunks",
+          "type": "INT",
+          "widget": {
+            "name": "chunks"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seq_threshold",
+          "name": "seq_threshold",
+          "type": "INT",
+          "widget": {
+            "name": "seq_threshold"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "VRAM saver: chunk feed-forward",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.5.0",
+        "Node name for S&R": "MiniMaxChunkFeedForward",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        4,
+        2048
+      ],
+      "widgets_values_named": {
+        "chunks": 4,
+        "seq_threshold": 2048
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 2002,
+      "type": "MiniMaxLowVRAMAttention",
+      "pos": [
+        520,
+        297.68636022129147
+      ],
+      "size": [
+        320,
+        60
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        },
+        {
+          "localized_name": "head_chunks",
+          "name": "head_chunks",
+          "type": "INT",
+          "widget": {
+            "name": "head_chunks"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "VRAM saver: low VRAM attention",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.5.0",
+        "Node name for S&R": "MiniMaxLowVRAMAttention",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        4
+      ],
+      "widgets_values_named": {
+        "head_chunks": 4
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 2003,
+      "type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+      "pos": [
+        520,
+        433.7647701659686
+      ],
+      "size": [
+        320,
+        40
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "Sage attention",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.5.0",
+        "Node name for S&R": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 2004,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        520,
+        549.8431801106458
+      ],
+      "size": [
+        420,
+        82
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 4
+        },
+        {
+          "localized_name": "lora_name",
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_model",
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "Turbo LoRA",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimaxloras\\turbo\\minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_resized_avg_rank_64_bf16.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimaxloras\\turbo\\minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_resized_avg_rank_64_bf16.safetensors",
+        "strength_model": 1
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2005,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        520,
+        707.9215900553229
+      ],
+      "size": [
+        420,
+        82
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 5
+        },
+        {
+          "localized_name": "lora_name",
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_model",
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "most important lora",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimaxloras\\MiniMax3_Boob Physics_v1.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimaxloras\\MiniMax3_Boob Physics_v1.safetensors",
+        "strength_model": 1
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 5,
+      "type": "MiniMaxH3SigmaShift",
+      "pos": [
+        520,
+        866
+      ],
+      "size": [
+        282.4367968620411,
+        82
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        },
+        {
+          "localized_name": "shift_video",
+          "name": "shift_video",
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift_video"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shift_audio",
+          "name": "shift_audio",
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            21,
+            23,
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "MiniMaxH3SigmaShift",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        12,
+        3
+      ],
+      "widgets_values_named": {
+        "shift_video": 12,
+        "shift_audio": 3
+      }
+    },
+    {
+      "id": 2010,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        728
+      ],
+      "size": [
+        300,
+        340
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10,
+            45
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "Picture 1 (subject)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "1eb0d332-f8f5-432d-9525-ac45aa7f3abf.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "1eb0d332-f8f5-432d-9525-ac45aa7f3abf.png",
+        "upload": "image"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 2011,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        1172
+      ],
+      "size": [
+        300,
+        340
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11,
+            46
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "Picture 2 (background)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "4d640c02-e560-4fcd-8b55-927010fa10b1.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "4d640c02-e560-4fcd-8b55-927010fa10b1.png",
+        "upload": "image"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 110,
+      "type": "MiniMaxH3ReferenceToVideo",
+      "pos": [
+        2100,
+        0
+      ],
+      "size": [
+        468,
+        604
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 7
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 8
+        },
+        {
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 9
+        },
+        {
+          "label": "ref_image_0",
+          "localized_name": "ref_image_0",
+          "name": "ref_images.ref_image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "localized_name": "ref_image_1",
+          "name": "ref_images.ref_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_images.ref_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "ref_video_0",
+          "localized_name": "ref_video_0",
+          "name": "ref_videos.ref_video_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "ref_video_audio_0",
+          "localized_name": "ref_video_audio_0",
+          "name": "ref_video_audios.ref_video_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "ref_audio_0",
+          "localized_name": "ref_audio_0",
+          "name": "ref_audios.ref_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audios.ref_audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audios.ref_audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 48
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "length",
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_size",
+          "name": "ref_image_size",
+          "type": "COMBO",
+          "widget": {
+            "name": "ref_image_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_images.ref_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_images.ref_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_images.ref_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_images.ref_image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_images.ref_image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_images.ref_image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_1",
+          "name": "ref_videos.ref_video_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_2",
+          "name": "ref_videos.ref_video_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_audio_1",
+          "name": "ref_video_audios.ref_video_audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_audio_2",
+          "name": "ref_video_audios.ref_video_audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            76
+          ]
+        },
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            77
+          ]
+        }
+      ],
+      "title": "PROMPT + REFERENCES (Ref2VA)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "MiniMaxH3ReferenceToVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "subject_definitions:\n<Subject 1> is the adult woman whose appearance comes from <Picture 1>. Preserve her face, curvy body proportions, pink hair, red clown nose, rainbow choker, pink-and-white winged costume with button detailing, pink gloves, rainbow cuffs, and visible accessories.\n<Picture 2> is the background only. It contains no subject. It supplies the colorful paneled backdrop for the scene, including its colors and lighting. Reproduce it as shown, with no added people or objects.\n\nsummary:\n[reference generation] <Subject 1> stands in front of the backdrop from <Picture 2>, waves at the camera, does a slow full spin in place, and finishes facing the camera with her hands on her hips over a 5-second clip. The camera is stationary.\n\nretention_analysis:\n<Subject 1> (throughout [Shot 1]): fully_preserved - retain her face, hair, clown nose, costume, gloves, and curvy figure from <Picture 1> while she waves, spins, and poses.\n<Picture 2> (background throughout [Shot 1]): fully_preserved - follow <Picture 2> exactly for the backdrop, its colors, and its lighting.\n\ndetailed_description:\nPhotorealistic live-action rendering with the same character appearance as the references, placed against the background from <Picture 2>. Soft, even studio lighting matches the backdrop. The camera is stationary for the entire clip: a locked-off, fixed medium-wide frame with no pan, tilt, zoom, or movement.\n\n[Shot 1] A medium-wide shot frames <Subject 1> standing in the center of the frame, full body visible from head to knees, in front of the colorful paneled backdrop from <Picture 2>. She faces the camera with a bright, open smile, her arms relaxed at her sides and her pink hair resting on her shoulders. She raises her right gloved hand to shoulder height and waves at the camera three times, her rainbow cuff swinging slightly with each wave. She lowers her hand, shifts her weight onto her toes, and begins a slow spin to her left in place. Her winged costume fans outward as she turns, showing her side, then her back, then her other side, while her pink hair swings out and settles. She completes the full turn and comes back to face the camera, planting her feet shoulder-width apart. She places both gloved hands on her hips, tilts her head slightly to the right, and holds the pose with a wide smile, her red clown nose catching the light. She stays still in this pose until the end of the shot, centered in the frame in front of the backdrop.\n\noverall_soundscape:\nQuiet room tone, with the soft rustle of her costume as she turns and the light tap of her shoes on the floor.\n\nnon_diegetic_music:\nLight, bouncy pop music plays throughout, with a steady beat, bright synths, and a quick tempo.",
+        480,
+        864,
+        192,
+        "max"
+      ],
+      "widgets_values_named": {
+        "prompt": "subject_definitions:\n<Subject 1> is the adult woman whose appearance comes from <Picture 1>. Preserve her face, curvy body proportions, pink hair, red clown nose, rainbow choker, pink-and-white winged costume with button detailing, pink gloves, rainbow cuffs, and visible accessories.\n<Picture 2> is the background only. It contains no subject. It supplies the colorful paneled backdrop for the scene, including its colors and lighting. Reproduce it as shown, with no added people or objects.\n\nsummary:\n[reference generation] <Subject 1> stands in front of the backdrop from <Picture 2>, waves at the camera, does a slow full spin in place, and finishes facing the camera with her hands on her hips over a 5-second clip. The camera is stationary.\n\nretention_analysis:\n<Subject 1> (throughout [Shot 1]): fully_preserved - retain her face, hair, clown nose, costume, gloves, and curvy figure from <Picture 1> while she waves, spins, and poses.\n<Picture 2> (background throughout [Shot 1]): fully_preserved - follow <Picture 2> exactly for the backdrop, its colors, and its lighting.\n\ndetailed_description:\nPhotorealistic live-action rendering with the same character appearance as the references, placed against the background from <Picture 2>. Soft, even studio lighting matches the backdrop. The camera is stationary for the entire clip: a locked-off, fixed medium-wide frame with no pan, tilt, zoom, or movement.\n\n[Shot 1] A medium-wide shot frames <Subject 1> standing in the center of the frame, full body visible from head to knees, in front of the colorful paneled backdrop from <Picture 2>. She faces the camera with a bright, open smile, her arms relaxed at her sides and her pink hair resting on her shoulders. She raises her right gloved hand to shoulder height and waves at the camera three times, her rainbow cuff swinging slightly with each wave. She lowers her hand, shifts her weight onto her toes, and begins a slow spin to her left in place. Her winged costume fans outward as she turns, showing her side, then her back, then her other side, while her pink hair swings out and settles. She completes the full turn and comes back to face the camera, planting her feet shoulder-width apart. She places both gloved hands on her hips, tilts her head slightly to the right, and holds the pose with a wide smile, her red clown nose catching the light. She stays still in this pose until the end of the shot, centered in the frame in front of the backdrop.\n\noverall_soundscape:\nQuiet room tone, with the soft rustle of her costume as she turns and the light tap of her shoes on the floor.\n\nnon_diegetic_music:\nLight, bouncy pop music plays throughout, with a steady beat, bright synths, and a quick tempo.",
+        "width": 480,
+        "height": 864,
+        "length": 192,
+        "ref_image_size": "max"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 418,
+      "type": "RandomNoise",
+      "pos": [
+        3220,
+        0
+      ],
+      "size": [
+        287.86850524707927,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "noise_seed",
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "NOISE",
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "title": "Seed",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "RandomNoise",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1234,
+        "increment"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 1234,
+        "control_after_generate": "increment"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 121,
+      "type": "BasicGuider",
+      "pos": [
+        3220,
+        186
+      ],
+      "size": [
+        270,
+        70
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 21
+        },
+        {
+          "localized_name": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "GUIDER",
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "BasicGuider",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 910,
+      "type": "KSamplerSelect",
+      "pos": [
+        3220,
+        360
+      ],
+      "size": [
+        300,
+        60
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "SAMPLER",
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            26,
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "KSamplerSelect",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "er_sde"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "er_sde"
+      }
+    },
+    {
+      "id": 123,
+      "type": "BasicScheduler",
+      "pos": [
+        3220,
+        524
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 23
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "SIGMAS",
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            27,
+            55
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "BasicScheduler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "beta",
+        8,
+        1
+      ],
+      "widgets_values_named": {
+        "scheduler": "beta",
+        "steps": 8,
+        "denoise": 1
+      }
+    },
+    {
+      "id": 124,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        3660,
+        0
+      ],
+      "size": [
+        300,
+        632
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "noise",
+          "name": "noise",
+          "type": "NOISE",
+          "link": 24
+        },
+        {
+          "localized_name": "guider",
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 25
+        },
+        {
+          "localized_name": "sampler",
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 26
+        },
+        {
+          "localized_name": "sigmas",
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 27
+        },
+        {
+          "localized_name": "latent_image",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "output",
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            29,
+            31,
+            44
+          ]
+        },
+        {
+          "localized_name": "denoised_output",
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "title": "Sampler",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 130,
+      "type": "VAEDecode",
+      "pos": [
+        4060,
+        0
+      ],
+      "size": [
+        240,
+        70
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 29
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            74
+          ]
+        }
+      ],
+      "title": "Frames",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 131,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        4060,
+        174
+      ],
+      "size": [
+        240,
+        70
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 31
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "title": "Audio",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAEDecodeAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 133,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        4500,
+        0
+      ],
+      "size": [
+        420,
+        1068
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 74
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 75
+        },
+        {
+          "localized_name": "meta_batch",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "localized_name": "frame_rate",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "loop_count",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "pingpong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save_output",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "name": "pix_fmt",
+          "type": [
+            "yuv420p",
+            "yuv420p10le"
+          ],
+          "widget": {
+            "name": "pix_fmt"
+          },
+          "link": null
+        },
+        {
+          "name": "crf",
+          "type": "INT",
+          "widget": {
+            "name": "crf"
+          },
+          "link": null
+        },
+        {
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Filenames",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": []
+        }
+      ],
+      "title": "SAVE THIS CLIP",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "h3_ref2va/clip",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 16,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "h3_ref2va/clip",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 16,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "clip_00047-audio.mp4",
+            "subfolder": "h3_ref2va",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "clip_00047.png",
+            "fullpath": "W:\\StableDiffusion\\ComfyFlux\\Comfy_UI_V61\\ComfyUI\\output\\h3_ref2va\\clip_00047-audio.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 480,
+              "height": 864,
+              "duration": 8,
+              "fps": 24,
+              "frame_count": 192
+            },
+            "id": "bd65a629-3e83-4bcd-ad28-be75de1eb060"
+          }
+        }
+      }
+    },
+    {
+      "id": 1004,
+      "type": "Note",
+      "pos": [
+        10.479767515555562,
+        -563.7916432355482
+      ],
+      "size": [
+        495.93084150260995,
+        432.8115438478749
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "READ ME",
+      "properties": {
+        "Node name for S&R": "Note",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "HOW TO USE (H3 Motion Context 0.6.2)\n\nUse the buttons on the CLOWN CHAIN node, not ComfyUI's Run:\n\u2022 Run / Re-roll: make the current clip again (change the seed for a new take)\n\u2022 Approve: keep this clip and make the next one\n\u2022 Chain: keep approving automatically (segments = how many clips, 0 = until Stop)\n\u2022 Reset: back to the start (Load 0 / Save 1)\n\u2022 Clear latents: delete the saved clips in the folder\n\nFirst clip: Load 0 / Save 1 (nothing is loaded, it starts fresh).\nThen Load 1 / Save 2, and so on. The buttons step these for you.\n\nLoad, Save and Clown Chain must stay inside the \"Context + Load/Save + Chain\" group or the buttons do nothing.\n\nEach clip is saved to output/h3_ref2va/ already trimmed, so you can drop them on a timeline back to back.\n\nLength must be 17k+5 frames (192 = 8 s, 243 = 10 s, 362 = 15 s).\nSet resolution and length on the PROMPT node (480x864 = 9:16 at 0.5 MP).\n\nRefer to pictures in the prompt as <Picture 1>, <Picture 2>... in the order they plug into ref_image_0, ref_image_1..."
+      ],
+      "widgets_values_named": {
+        "text": "HOW TO USE (H3 Motion Context 0.6.2)\n\nUse the buttons on the CLOWN CHAIN node, not ComfyUI's Run:\n\u2022 Run / Re-roll: make the current clip again (change the seed for a new take)\n\u2022 Approve: keep this clip and make the next one\n\u2022 Chain: keep approving automatically (segments = how many clips, 0 = until Stop)\n\u2022 Reset: back to the start (Load 0 / Save 1)\n\u2022 Clear latents: delete the saved clips in the folder\n\nFirst clip: Load 0 / Save 1 (nothing is loaded, it starts fresh).\nThen Load 1 / Save 2, and so on. The buttons step these for you.\n\nLoad, Save and Clown Chain must stay inside the \"Context + Load/Save + Chain\" group or the buttons do nothing.\n\nEach clip is saved to output/h3_ref2va/ already trimmed, so you can drop them on a timeline back to back.\n\nLength must be 17k+5 frames (192 = 8 s, 243 = 10 s, 362 = 15 s).\nSet resolution and length on the PROMPT node (480x864 = 9:16 at 0.5 MP).\n\nRefer to pictures in the prompt as <Picture 1>, <Picture 2>... in the order they plug into ref_image_0, ref_image_1..."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2021,
+      "type": "MiniMaxH3MotionContextLoadLatent",
+      "pos": [
+        2680,
+        394
+      ],
+      "size": [
+        320,
+        90
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "latent_path",
+          "name": "latent_path",
+          "type": "STRING",
+          "widget": {
+            "name": "latent_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "clip_index",
+          "name": "clip_index",
+          "type": "INT",
+          "widget": {
+            "name": "clip_index"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            67,
+            82,
+            86
+          ]
+        }
+      ],
+      "title": "LOAD previous clip (continue from)",
+      "properties": {
+        "cnr_id": "comfyui-h3-motion-context",
+        "ver": "5335715abe54c1a9bfbe3494da29aae3e8635ce3",
+        "Node name for S&R": "MiniMaxH3MotionContextLoadLatent",
+        "aux_id": "NikoDemon80/ComfyUI-H3-Motion-Context",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "h3_ref2va",
+        0
+      ],
+      "widgets_values_named": {
+        "latent_path": "h3_ref2va",
+        "clip_index": 9
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 2022,
+      "type": "MiniMaxH3MotionContextSaveLatent",
+      "pos": [
+        2680,
+        588
+      ],
+      "size": [
+        320,
+        90
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "link": 44
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "clip_index",
+          "name": "clip_index",
+          "type": "INT",
+          "widget": {
+            "name": "clip_index"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "latent_path",
+          "name": "latent_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "SAVE this clip (for the next one)",
+      "properties": {
+        "cnr_id": "comfyui-h3-motion-context",
+        "ver": "5335715abe54c1a9bfbe3494da29aae3e8635ce3",
+        "Node name for S&R": "MiniMaxH3MotionContextSaveLatent",
+        "aux_id": "NikoDemon80/ComfyUI-H3-Motion-Context",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "h3_ref2va/clip",
+        1
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "h3_ref2va/clip",
+        "clip_index": 10
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 2030,
+      "type": "H3PromptReferenceInputs",
+      "pos": [
+        1040,
+        0
+      ],
+      "size": [
+        320,
+        146
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "<Picture 1>",
+          "localized_name": "<Picture 1>",
+          "name": "pictures.<Picture 1>",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 45
+        },
+        {
+          "label": "<Picture 2>",
+          "localized_name": "<Picture 2>",
+          "name": "pictures.<Picture 2>",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 46
+        },
+        {
+          "label": "<Picture 3>",
+          "localized_name": "<Picture 3>",
+          "name": "pictures.<Picture 3>",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "<Video 1>",
+          "localized_name": "<Video 1>",
+          "name": "videos.<Video 1>",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "<Audio 1>",
+          "localized_name": "<Audio 1>",
+          "name": "audios.<Audio 1>",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "<Audio 2>",
+          "localized_name": "<Audio 2>",
+          "name": "audios.<Audio 2>",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "references",
+          "localized_name": "references",
+          "name": "references",
+          "type": "H3_PROMPT_REFERENCES",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "title": "H3 Prompt IDE - references",
+      "properties": {
+        "cnr_id": "h3-prompt-ide",
+        "ver": "9d6ceb0495c45d63f195a056d16c7327950fda58",
+        "Node name for S&R": "H3PromptReferenceInputs",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 2031,
+      "type": "H3PromptIDE",
+      "pos": [
+        1040,
+        250
+      ],
+      "size": [
+        940,
+        1150
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "references",
+          "name": "references",
+          "shape": 7,
+          "type": "H3_PROMPT_REFERENCES",
+          "link": 47
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "text",
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            48,
+            49,
+            80
+          ]
+        }
+      ],
+      "title": "H3 Prompt IDE - write the prompt here",
+      "properties": {
+        "cnr_id": "h3-prompt-ide",
+        "ver": "9d6ceb0495c45d63f195a056d16c7327950fda58",
+        "Node name for S&R": "H3PromptIDE",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "subject_definitions:\n<Subject 1> is the adult woman whose appearance comes from <Picture 1>. Preserve her face, curvy body proportions, pink hair, red clown nose, rainbow choker, pink-and-white winged costume with button detailing, pink gloves, rainbow cuffs, and visible accessories.\n<Picture 2> is the background only. It contains no subject. It supplies the colorful paneled backdrop for the scene, including its colors and lighting. Reproduce it as shown, with no added people or objects.\n\nsummary:\n[reference generation] <Subject 1> stands in front of the backdrop from <Picture 2>, waves at the camera, does a slow full spin in place, and finishes facing the camera with her hands on her hips over a 5-second clip. The camera is stationary.\n\nretention_analysis:\n<Subject 1> (throughout [Shot 1]): fully_preserved - retain her face, hair, clown nose, costume, gloves, and curvy figure from <Picture 1> while she waves, spins, and poses.\n<Picture 2> (background throughout [Shot 1]): fully_preserved - follow <Picture 2> exactly for the backdrop, its colors, and its lighting.\n\ndetailed_description:\nPhotorealistic live-action rendering with the same character appearance as the references, placed against the background from <Picture 2>. Soft, even studio lighting matches the backdrop. The camera is stationary for the entire clip: a locked-off, fixed medium-wide frame with no pan, tilt, zoom, or movement.\n\n[Shot 1] A medium-wide shot frames <Subject 1> standing in the center of the frame, full body visible from head to knees, in front of the colorful paneled backdrop from <Picture 2>. She faces the camera with a bright, open smile, her arms relaxed at her sides and her pink hair resting on her shoulders. She raises her right gloved hand to shoulder height and waves at the camera three times, her rainbow cuff swinging slightly with each wave. She lowers her hand, shifts her weight onto her toes, and begins a slow spin to her left in place. Her winged costume fans outward as she turns, showing her side, then her back, then her other side, while her pink hair swings out and settles. She completes the full turn and comes back to face the camera, planting her feet shoulder-width apart. She places both gloved hands on her hips, tilts her head slightly to the right, and holds the pose with a wide smile, her red clown nose catching the light. She stays still in this pose until the end of the shot, centered in the frame in front of the backdrop.\n\noverall_soundscape:\nQuiet room tone, with the soft rustle of her costume as she turns and the light tap of her shoes on the floor.\n\nnon_diegetic_music:\nLight, bouncy pop music plays throughout, with a steady beat, bright synths, and a quick tempo."
+      ],
+      "widgets_values_named": {
+        "prompt": "subject_definitions:\n<Subject 1> is the adult woman whose appearance comes from <Picture 1>. Preserve her face, curvy body proportions, pink hair, red clown nose, rainbow choker, pink-and-white winged costume with button detailing, pink gloves, rainbow cuffs, and visible accessories.\n<Picture 2> is the background only. It contains no subject. It supplies the colorful paneled backdrop for the scene, including its colors and lighting. Reproduce it as shown, with no added people or objects.\n\nsummary:\n[reference generation] <Subject 1> stands in front of the backdrop from <Picture 2>, waves at the camera, does a slow full spin in place, and finishes facing the camera with her hands on her hips over a 5-second clip. The camera is stationary.\n\nretention_analysis:\n<Subject 1> (throughout [Shot 1]): fully_preserved - retain her face, hair, clown nose, costume, gloves, and curvy figure from <Picture 1> while she waves, spins, and poses.\n<Picture 2> (background throughout [Shot 1]): fully_preserved - follow <Picture 2> exactly for the backdrop, its colors, and its lighting.\n\ndetailed_description:\nPhotorealistic live-action rendering with the same character appearance as the references, placed against the background from <Picture 2>. Soft, even studio lighting matches the backdrop. The camera is stationary for the entire clip: a locked-off, fixed medium-wide frame with no pan, tilt, zoom, or movement.\n\n[Shot 1] A medium-wide shot frames <Subject 1> standing in the center of the frame, full body visible from head to knees, in front of the colorful paneled backdrop from <Picture 2>. She faces the camera with a bright, open smile, her arms relaxed at her sides and her pink hair resting on her shoulders. She raises her right gloved hand to shoulder height and waves at the camera three times, her rainbow cuff swinging slightly with each wave. She lowers her hand, shifts her weight onto her toes, and begins a slow spin to her left in place. Her winged costume fans outward as she turns, showing her side, then her back, then her other side, while her pink hair swings out and settles. She completes the full turn and comes back to face the camera, planting her feet shoulder-width apart. She places both gloved hands on her hips, tilts her head slightly to the right, and holds the pose with a wide smile, her red clown nose catching the light. She stays still in this pose until the end of the shot, centered in the frame in front of the backdrop.\n\noverall_soundscape:\nQuiet room tone, with the soft rustle of her costume as she turns and the light tap of her shoes on the floor.\n\nnon_diegetic_music:\nLight, bouncy pop music plays throughout, with a steady beat, bright synths, and a quick tempo."
+      }
+    },
+    {
+      "id": 3001,
+      "type": "H3ClownContextExperimental",
+      "pos": [
+        2680,
+        40
+      ],
+      "size": [
+        500,
+        242
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "link": 65
+        },
+        {
+          "localized_name": "shot_number",
+          "name": "shot_number",
+          "shape": 7,
+          "type": "INT",
+          "link": 66
+        },
+        {
+          "localized_name": "previous_shot",
+          "name": "previous_shot",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 67
+        },
+        {
+          "localized_name": "head_frames",
+          "name": "head_frames",
+          "type": "INT",
+          "widget": {
+            "name": "head_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "drop_last",
+          "name": "drop_last",
+          "type": "INT",
+          "widget": {
+            "name": "drop_last"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "drop_first",
+          "name": "drop_first",
+          "type": "INT",
+          "widget": {
+            "name": "drop_first"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "hold_audio",
+          "name": "hold_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "hold_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "first_shot",
+          "name": "first_shot",
+          "type": "INT",
+          "widget": {
+            "name": "first_shot"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_frames",
+          "name": "audio_frames",
+          "type": "INT",
+          "widget": {
+            "name": "audio_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_feather_ticks",
+          "name": "audio_feather_ticks",
+          "type": "INT",
+          "widget": {
+            "name": "audio_feather_ticks"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "av_latent",
+          "name": "av_latent",
+          "type": "LATENT",
+          "links": [
+            68
+          ]
+        }
+      ],
+      "title": "Clown Context (39, drop last 17: holds the previous shot's frames)",
+      "properties": {
+        "Node name for S&R": "H3ClownContextExperimental",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        39,
+        17,
+        0,
+        true,
+        1,
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "head_frames": 39,
+        "drop_last": 17,
+        "drop_first": 0,
+        "hold_audio": true,
+        "first_shot": 1,
+        "audio_frames": 0,
+        "audio_feather_ticks": 0
+      },
+      "color": "#c2407a",
+      "bgcolor": "#6e2347"
+    },
+    {
+      "id": 3002,
+      "type": "H3BlockTailAnchorExperimental",
+      "pos": [
+        2680,
+        750.0701615323115
+      ],
+      "size": [
+        500,
+        198
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "link": 68
+        },
+        {
+          "localized_name": "next_shot",
+          "name": "next_shot",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 69
+        },
+        {
+          "localized_name": "tail_frames",
+          "name": "tail_frames",
+          "type": "INT",
+          "widget": {
+            "name": "tail_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "drop_last",
+          "name": "drop_last",
+          "type": "INT",
+          "widget": {
+            "name": "drop_last"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "drop_first",
+          "name": "drop_first",
+          "type": "INT",
+          "widget": {
+            "name": "drop_first"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "hold_audio",
+          "name": "hold_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "hold_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_frames",
+          "name": "audio_frames",
+          "type": "INT",
+          "widget": {
+            "name": "audio_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_feather_ticks",
+          "name": "audio_feather_ticks",
+          "type": "INT",
+          "widget": {
+            "name": "audio_feather_ticks"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "av_latent",
+          "name": "av_latent",
+          "type": "LATENT",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "title": "Clown Anchoring (56, drop first 17: pins the prophecy ending)",
+      "properties": {
+        "Node name for S&R": "H3BlockTailAnchorExperimental",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        56,
+        0,
+        17,
+        true,
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "tail_frames": 56,
+        "drop_last": 0,
+        "drop_first": 17,
+        "hold_audio": true,
+        "audio_frames": 0,
+        "audio_feather_ticks": 0
+      },
+      "color": "#c2407a",
+      "bgcolor": "#6e2347"
+    },
+    {
+      "id": 3010,
+      "type": "H3ClownShotCounter",
+      "pos": [
+        987.9431111111118,
+        -1897.9813333333213
+      ],
+      "size": [
+        340,
+        208
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "shot_number",
+          "name": "shot_number",
+          "type": "INT",
+          "widget": {
+            "name": "shot_number"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shot_counter",
+          "name": "shot_counter",
+          "type": "COMBO",
+          "widget": {
+            "name": "shot_counter"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_classic_counter",
+          "name": "use_classic_counter",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_classic_counter"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_prefix",
+          "name": "latent_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "latent_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "shot_number",
+          "name": "shot_number",
+          "type": "INT",
+          "links": [
+            58,
+            66,
+            81
+          ]
+        },
+        {
+          "localized_name": "previous_shot",
+          "name": "previous_shot",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "localized_name": "continuation",
+          "name": "continuation",
+          "type": "BOOLEAN",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3ClownShotCounter",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "follow motion context",
+        true,
+        "h3_ref2va/clip"
+      ],
+      "widgets_values_named": {
+        "shot_number": 10,
+        "shot_counter": "follow motion context",
+        "use_classic_counter": true,
+        "latent_prefix": "h3_ref2va/clip"
+      },
+      "color": "#c2407a",
+      "bgcolor": "#6e2347"
+    },
+    {
+      "id": 3011,
+      "type": "H3ClownProphecyPrompt",
+      "pos": [
+        1387.9431111111116,
+        -1897.9813333333213
+      ],
+      "size": [
+        420,
+        420
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "link": 49
+        },
+        {
+          "localized_name": "prompt_mode",
+          "name": "prompt_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "prompt_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ollama_model",
+          "name": "ollama_model",
+          "type": "STRING",
+          "widget": {
+            "name": "ollama_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ollama_url",
+          "name": "ollama_url",
+          "type": "STRING",
+          "widget": {
+            "name": "ollama_url"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "manual_summary",
+          "name": "manual_summary",
+          "type": "STRING",
+          "widget": {
+            "name": "manual_summary"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "manual_detailed_description",
+          "name": "manual_detailed_description",
+          "type": "STRING",
+          "widget": {
+            "name": "manual_detailed_description"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "llm_sees",
+          "name": "llm_sees",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "llm_sees"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "prophecy_prompt",
+          "name": "prophecy_prompt",
+          "type": "PROPHECY_PROMPT",
+          "links": [
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3ClownProphecyPrompt",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "ollama",
+        "qwen3.8:27b",
+        "http://127.0.0.1:11434",
+        "",
+        "",
+        false
+      ],
+      "widgets_values_named": {
+        "prompt_mode": "ollama",
+        "ollama_model": "qwen3.8:27b",
+        "ollama_url": "http://127.0.0.1:11434",
+        "manual_summary": "",
+        "manual_detailed_description": "",
+        "llm_sees": false
+      },
+      "color": "#c2407a",
+      "bgcolor": "#6e2347"
+    },
+    {
+      "id": 3012,
+      "type": "H3ClownProphecySampler",
+      "pos": [
+        1856.112000000001,
+        -1903.8968888888767
+      ],
+      "size": [
+        638.7623046875,
+        474
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 50
+        },
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 51
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 52
+        },
+        {
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 53
+        },
+        {
+          "localized_name": "sampler",
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 54
+        },
+        {
+          "localized_name": "sigmas",
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 55
+        },
+        {
+          "localized_name": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 56
+        },
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "link": 57
+        },
+        {
+          "localized_name": "shot_number",
+          "name": "shot_number",
+          "type": "INT",
+          "link": 58
+        },
+        {
+          "localized_name": "prophecy_prompt",
+          "name": "prophecy_prompt",
+          "shape": 7,
+          "type": "PROPHECY_PROMPT",
+          "link": 59
+        },
+        {
+          "localized_name": "previous_shot",
+          "name": "previous_shot",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 86
+        },
+        {
+          "localized_name": "bypass",
+          "name": "bypass",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "bypass"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "run_every",
+          "name": "run_every",
+          "type": "INT",
+          "widget": {
+            "name": "run_every"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prophecy_frames",
+          "name": "prophecy_frames",
+          "type": "INT",
+          "widget": {
+            "name": "prophecy_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_mask",
+          "name": "audio_mask",
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_mask"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "accept",
+          "name": "accept",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "accept"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lock_accept",
+          "name": "lock_accept",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "lock_accept"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "continue_audio",
+          "name": "continue_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "continue_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "continue_audio_frames",
+          "name": "continue_audio_frames",
+          "type": "INT",
+          "widget": {
+            "name": "continue_audio_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prophecy_latent_folder",
+          "name": "prophecy_latent_folder",
+          "type": "STRING",
+          "widget": {
+            "name": "prophecy_latent_folder"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "prophecy_latent",
+          "name": "prophecy_latent",
+          "type": "LATENT",
+          "links": [
+            69
+          ]
+        },
+        {
+          "localized_name": "preview",
+          "name": "preview",
+          "type": "IMAGE",
+          "links": [
+            60
+          ]
+        },
+        {
+          "localized_name": "prophecy_prompt",
+          "name": "prophecy_prompt",
+          "type": "STRING",
+          "links": [
+            61
+          ]
+        },
+        {
+          "localized_name": "shot_audio",
+          "name": "shot_audio",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "report",
+          "name": "report",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "localized_name": "audio_latent",
+          "name": "audio_latent",
+          "type": "LATENT",
+          "links": [
+            64
+          ]
+        }
+      ],
+      "title": "CLOWN PROPHECY SAMPLER (accept off = make an ending and stop / accept on = use it)",
+      "properties": {
+        "Node name for S&R": "H3ClownProphecySampler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        false,
+        2,
+        56,
+        1234,
+        "increment",
+        0,
+        true,
+        true,
+        false,
+        39,
+        "clown_prophecy"
+      ],
+      "widgets_values_named": {
+        "bypass": false,
+        "run_every": 2,
+        "prophecy_frames": 56,
+        "seed": 1234,
+        "fixed": "increment",
+        "audio_mask": 0,
+        "accept": true,
+        "lock_accept": true,
+        "continue_audio": false,
+        "continue_audio_frames": 39,
+        "prophecy_latent_folder": "clown_prophecy"
+      },
+      "color": "#c2407a",
+      "bgcolor": "#6e2347"
+    },
+    {
+      "id": 3013,
+      "type": "LTXVSeparateAVLatent",
+      "pos": [
+        2558.981712409941,
+        -1845.5479771638825
+      ],
+      "size": [
+        199.2046875,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "av_latent",
+          "name": "av_latent",
+          "type": "LATENT",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video_latent",
+          "name": "video_latent",
+          "type": "LATENT",
+          "links": [
+            63
+          ]
+        },
+        {
+          "localized_name": "audio_latent",
+          "name": "audio_latent",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "title": "Split video / audio latent",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "LTXVSeparateAVLatent",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      }
+    },
+    {
+      "id": 3014,
+      "type": "LTXVConcatAVLatent",
+      "pos": [
+        2544.6039342182157,
+        -1734.5720337256769
+      ],
+      "size": [
+        252.7642578125,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video_latent",
+          "name": "video_latent",
+          "type": "LATENT",
+          "link": 63
+        },
+        {
+          "localized_name": "audio_latent",
+          "name": "audio_latent",
+          "type": "LATENT",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            65
+          ]
+        }
+      ],
+      "title": "Video latent + prophecy sound",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.2",
+        "Node name for S&R": "LTXVConcatAVLatent",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      }
+    },
+    {
+      "id": 3015,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2867.9431111111116,
+        -1897.9813333333213
+      ],
+      "size": [
+        560,
+        1320
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 60
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "meta_batch",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "localized_name": "frame_rate",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "loop_count",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "pingpong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save_output",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "name": "pix_fmt",
+          "type": [
+            "yuv420p",
+            "yuv420p10le"
+          ],
+          "widget": {
+            "name": "pix_fmt"
+          },
+          "link": null
+        },
+        {
+          "name": "crf",
+          "type": "INT",
+          "widget": {
+            "name": "crf"
+          },
+          "link": null
+        },
+        {
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Filenames",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": []
+        }
+      ],
+      "title": "Preview: prophecy ending (not saved)",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "minimax/tail_preview/mm",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 16,
+        "save_metadata": false,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": false,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "minimax/tail_preview/mm",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 16,
+        "save_metadata": false,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": false,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "mm_00005.mp4",
+            "subfolder": "minimax\\tail_preview",
+            "type": "temp",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "mm_00005.png",
+            "fullpath": "W:\\StableDiffusion\\ComfyFlux\\Comfy_UI_V61\\ComfyUI\\temp\\minimax\\tail_preview\\mm_00005.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 480,
+              "height": 864,
+              "duration": 2.3333333333333335,
+              "fps": 24,
+              "frame_count": 56
+            },
+            "id": "b125ce8d-48c7-4a08-92ba-eeafc9162901"
+          }
+        }
+      }
+    },
+    {
+      "id": 3016,
+      "type": "ShowText|pysssss",
+      "pos": [
+        3487.9431111111116,
+        -1897.9813333333213
+      ],
+      "size": [
+        560,
+        420
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "Prophecy prompt (what the LLM wrote)",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": null,
+      "widgets_values_named": {
+        "text_0": "subject_definitions:\n<Subject 1> is the adult woman whose appearance comes from <Picture 1>. Preserve her face, curvy body proportions, pink hair, red clown nose, rainbow choker, pink-and-white winged costume with button detailing, pink gloves, rainbow cuffs, and visible accessories.\n<Picture 2> is the background only. It contains no subject. It supplies the colorful paneled backdrop for the scene, including its colors and lighting. Reproduce it as shown, with no added people or objects.\n<Picture 3> is the scene layout reference for the target video, showing the environment: the location and its background.\n\nsummary:\n[reference generation] <Subject 1> completes her spin, faces the camera with both gloved hands on her hips, tilts her head slightly to the right, and holds the final pose with a wide smile in front of the colorful paneled backdrop from <Picture 2>. The camera remains stationary.\n\nretention_analysis:\n<Subject 1> (throughout [Shot 1]): fully_preserved - retain her face, hair, clown nose, costume, gloves, and curvy figure from <Picture 1> while she waves, spins, and poses.\n<Picture 2> (background throughout [Shot 1]): fully_preserved - follow <Picture 2> exactly for the backdrop, its colors, and its lighting.\n<Picture 3> (environment of the target video): partially_preserved - follow its location and background; the subjects' appearance comes from their own references.\n\ndetailed_description:\nPhotorealistic live-action rendering with the same character appearance as the references, placed against the background from <Picture 2>. Soft, even studio lighting matches the backdrop. The camera is stationary for the entire clip: a locked-off, fixed medium-wide frame with no pan, tilt, zoom, or movement.\n\n[Shot 1] A medium-wide shot frames <Subject 1> standing in the center of the frame, full body visible from head to knees, in front of the colorful paneled backdrop from <Picture 2>. She is facing the camera directly, her feet planted shoulder-width apart on the floor. Both of her pink-gloved hands rest firmly on her hips, elbows angled outward, her rainbow cuffs visible at her wrists. Her head is tilted slightly to the right, her pink hair settled and resting on her shoulders, and her red clown nose catches the soft studio light. She holds a wide, open smile, her expression bright and steady. Her pink-and-white winged costume with button detailing hangs settled at her sides, the wing panels resting naturally against her back. She remains perfectly still in this pose for the duration of the shot, centered in the frame in front of the backdrop, with no further movement.\n\noverall_soundscape:\nQuiet room tone, with the soft rustle of her costume as she turns and the light tap of her shoes on the floor.\n\nnon_diegetic_music:\nLight, bouncy pop music plays throughout, with a steady beat, bright synths, and a quick tempo."
+      }
+    },
+    {
+      "id": 2023,
+      "type": "H3ClownChain",
+      "pos": [
+        2686.842108243076,
+        1028.2456219815363
+      ],
+      "size": [
+        350.7095703125,
+        168
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "segments",
+          "name": "segments",
+          "type": "INT",
+          "widget": {
+            "name": "segments"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "CLOWN CHAIN - Approve / Run / Chain / Reset",
+      "properties": {
+        "Node name for S&R": "H3ClownChain",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        10,
+        ""
+      ],
+      "widgets_values_named": {
+        "segments": 10,
+        "clown_chain": ""
+      },
+      "color": "#c2407a",
+      "bgcolor": "#6e2347"
+    },
+    {
+      "id": 3017,
+      "type": "Note",
+      "pos": [
+        543.9952046711093,
+        -470
+      ],
+      "size": [
+        560,
+        359.5
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "DOWNLOAD LINKS - where to get every node",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "WHERE TO GET THE NODES IN THIS WORKFLOW\n\nClown nodes + Clown Chain (Clown Context Suite):\nhttps://github.com/roycho87/clown_context_suite\n\nLoad / Save Latent - install ONE of these, not both (they use the same node names):\n  H3 Motion Context: https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context\n  H3 Motion Context MultiRef: https://github.com/seitanism/ComfyUI-H3-Motion-Context-MultiRef\n\nH3 Prompt IDE:\nhttps://github.com/ethanfel/ComfyUI-H3-Prompt-IDE\n\nKJNodes (MiniMax low-VRAM / Sage attention nodes):\nhttps://github.com/kijai/ComfyUI-KJNodes\n\nControlNet Auxiliary Preprocessors (only for Clown Carryover's depth / pose options; canny works without it):\nhttps://github.com/Fannovel16/comfyui_controlnet_aux\n\nVideoHelperSuite (Video Combine):\nhttps://github.com/Kosinkadink/ComfyUI-VideoHelperSuite\n\nComfyUI-Custom-Scripts (Show Text):\nhttps://github.com/pythongosssss/ComfyUI-Custom-Scripts\n\nEverything else is built into ComfyUI. Update ComfyUI if the MiniMax H3 nodes are missing."
+      ],
+      "widgets_values_named": {
+        "text": "WHERE TO GET THE NODES IN THIS WORKFLOW\n\nClown nodes + Clown Chain (Clown Context Suite):\nhttps://github.com/roycho87/clown_context_suite\n\nLoad / Save Latent - install ONE of these, not both (they use the same node names):\n  H3 Motion Context: https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context\n  H3 Motion Context MultiRef: https://github.com/seitanism/ComfyUI-H3-Motion-Context-MultiRef\n\nH3 Prompt IDE:\nhttps://github.com/ethanfel/ComfyUI-H3-Prompt-IDE\n\nKJNodes (MiniMax low-VRAM / Sage attention nodes):\nhttps://github.com/kijai/ComfyUI-KJNodes\n\nVideoHelperSuite (Video Combine):\nhttps://github.com/Kosinkadink/ComfyUI-VideoHelperSuite\n\nComfyUI-Custom-Scripts (Show Text):\nhttps://github.com/pythongosssss/ComfyUI-Custom-Scripts\n\nEverything else is built into ComfyUI. Update ComfyUI if the MiniMax H3 nodes are missing."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4030,
+      "type": "H3ClownCarryover",
+      "pos": [
+        987.9431111111118,
+        -2387.9813333333213
+      ],
+      "size": [
+        420,
+        366
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 76
+        },
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "link": 77
+        },
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 78
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 79
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "link": 80
+        },
+        {
+          "localized_name": "shot_number",
+          "name": "shot_number",
+          "shape": 7,
+          "type": "INT",
+          "link": 81
+        },
+        {
+          "localized_name": "previous_shot",
+          "name": "previous_shot",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 82
+        },
+        {
+          "localized_name": "optional_frame",
+          "name": "optional_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "enabled",
+          "name": "enabled",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "enabled"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "bypass",
+          "name": "bypass",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "bypass"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "run_every",
+          "name": "run_every",
+          "type": "INT",
+          "widget": {
+            "name": "run_every"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "first_shot",
+          "name": "first_shot",
+          "type": "INT",
+          "widget": {
+            "name": "first_shot"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "carry_lighting",
+          "name": "carry_lighting",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "carry_lighting"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "carry_positions",
+          "name": "carry_positions",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "carry_positions"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "retention",
+          "name": "retention",
+          "type": "COMBO",
+          "widget": {
+            "name": "retention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "frame_source",
+          "name": "frame_source",
+          "type": "COMBO",
+          "widget": {
+            "name": "frame_source"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "clip_number",
+          "name": "clip_number",
+          "type": "INT",
+          "widget": {
+            "name": "clip_number"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_folder",
+          "name": "latent_folder",
+          "type": "STRING",
+          "widget": {
+            "name": "latent_folder"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "frame_position",
+          "name": "frame_position",
+          "type": "COMBO",
+          "widget": {
+            "name": "frame_position"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            56,
+            71
+          ]
+        },
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            57,
+            62
+          ]
+        },
+        {
+          "localized_name": "frame",
+          "name": "frame",
+          "type": "IMAGE",
+          "links": [
+            87
+          ]
+        }
+      ],
+      "title": "Clown Carryover (earlier frame -> extra reference picture)",
+      "properties": {
+        "Node name for S&R": "H3ClownCarryover",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "enabled": true,
+            "bypass": true,
+            "run_every": true,
+            "first_shot": true,
+            "carry_lighting": true,
+            "carry_positions": true,
+            "retention": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        false,
+        2,
+        1,
+        false,
+        false,
+        "partially_preserved",
+        "selected clip",
+        1,
+        "h3_ref2va",
+        "last frame"
+      ],
+      "widgets_values_named": {
+        "enabled": true,
+        "bypass": false,
+        "run_every": 2,
+        "first_shot": 1,
+        "carry_lighting": false,
+        "carry_positions": false,
+        "retention": "partially_preserved",
+        "frame_source": "selected clip",
+        "clip_number": 1,
+        "latent_folder": "h3_ref2va",
+        "frame_position": "last frame"
+      },
+      "color": "#c2407a",
+      "bgcolor": "#6e2347"
+    },
+    {
+      "id": 4031,
+      "type": "PreviewImage",
+      "pos": [
+        1446.5937197668336,
+        -2430.135968295622
+      ],
+      "size": [
+        276.4641077870597,
+        439.1095864911224
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 4033,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        527.0261382975277,
+        10.526993017321043
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 89
+        },
+        {
+          "localized_name": "backend",
+          "name": "attention",
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            90
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "ModelAttentionBackend",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ],
+      "widgets_values_named": {
+        "attention": "comfy kitchen attention"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    }
+  ],
+  "links": [
+    [
+      2,
+      2001,
+      0,
+      2002,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      2002,
+      0,
+      2003,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      2003,
+      0,
+      2004,
+      0,
+      "MODEL"
+    ],
+    [
+      5,
+      2004,
+      0,
+      2005,
+      0,
+      "MODEL"
+    ],
+    [
+      6,
+      2005,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      21,
+      5,
+      0,
+      121,
+      0,
+      "MODEL"
+    ],
+    [
+      23,
+      5,
+      0,
+      123,
+      0,
+      "MODEL"
+    ],
+    [
+      24,
+      418,
+      0,
+      124,
+      0,
+      "NOISE"
+    ],
+    [
+      25,
+      121,
+      0,
+      124,
+      1,
+      "GUIDER"
+    ],
+    [
+      26,
+      910,
+      0,
+      124,
+      2,
+      "SAMPLER"
+    ],
+    [
+      27,
+      123,
+      0,
+      124,
+      3,
+      "SIGMAS"
+    ],
+    [
+      29,
+      124,
+      0,
+      130,
+      0,
+      "LATENT"
+    ],
+    [
+      30,
+      399,
+      0,
+      130,
+      1,
+      "VAE"
+    ],
+    [
+      31,
+      124,
+      0,
+      131,
+      0,
+      "LATENT"
+    ],
+    [
+      32,
+      400,
+      0,
+      131,
+      1,
+      "VAE"
+    ],
+    [
+      44,
+      124,
+      0,
+      2022,
+      0,
+      "LATENT"
+    ],
+    [
+      47,
+      2030,
+      0,
+      2031,
+      0,
+      "H3_PROMPT_REFERENCES"
+    ],
+    [
+      49,
+      2031,
+      0,
+      3011,
+      0,
+      "STRING"
+    ],
+    [
+      50,
+      5,
+      0,
+      3012,
+      0,
+      "MODEL"
+    ],
+    [
+      51,
+      398,
+      0,
+      3012,
+      1,
+      "CLIP"
+    ],
+    [
+      52,
+      399,
+      0,
+      3012,
+      2,
+      "VAE"
+    ],
+    [
+      53,
+      400,
+      0,
+      3012,
+      3,
+      "VAE"
+    ],
+    [
+      54,
+      910,
+      0,
+      3012,
+      4,
+      "SAMPLER"
+    ],
+    [
+      55,
+      123,
+      0,
+      3012,
+      5,
+      "SIGMAS"
+    ],
+    [
+      56,
+      4030,
+      0,
+      3012,
+      6,
+      "CONDITIONING"
+    ],
+    [
+      57,
+      4030,
+      1,
+      3012,
+      7,
+      "LATENT"
+    ],
+    [
+      58,
+      3010,
+      0,
+      3012,
+      8,
+      "INT"
+    ],
+    [
+      59,
+      3011,
+      0,
+      3012,
+      9,
+      "PROPHECY_PROMPT"
+    ],
+    [
+      60,
+      3012,
+      1,
+      3015,
+      0,
+      "IMAGE"
+    ],
+    [
+      61,
+      3012,
+      2,
+      3016,
+      0,
+      "STRING"
+    ],
+    [
+      62,
+      4030,
+      1,
+      3013,
+      0,
+      "LATENT"
+    ],
+    [
+      63,
+      3013,
+      0,
+      3014,
+      0,
+      "LATENT"
+    ],
+    [
+      64,
+      3012,
+      5,
+      3014,
+      1,
+      "LATENT"
+    ],
+    [
+      65,
+      3014,
+      0,
+      3001,
+      0,
+      "LATENT"
+    ],
+    [
+      66,
+      3010,
+      0,
+      3001,
+      1,
+      "INT"
+    ],
+    [
+      67,
+      2021,
+      0,
+      3001,
+      2,
+      "LATENT"
+    ],
+    [
+      68,
+      3001,
+      0,
+      3002,
+      0,
+      "LATENT"
+    ],
+    [
+      69,
+      3012,
+      0,
+      3002,
+      1,
+      "LATENT"
+    ],
+    [
+      70,
+      3002,
+      0,
+      124,
+      4,
+      "LATENT"
+    ],
+    [
+      71,
+      4030,
+      0,
+      121,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      74,
+      130,
+      0,
+      133,
+      0,
+      "IMAGE"
+    ],
+    [
+      75,
+      131,
+      0,
+      133,
+      1,
+      "AUDIO"
+    ],
+    [
+      76,
+      110,
+      0,
+      4030,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      77,
+      110,
+      1,
+      4030,
+      1,
+      "LATENT"
+    ],
+    [
+      78,
+      398,
+      0,
+      4030,
+      2,
+      "CLIP"
+    ],
+    [
+      79,
+      399,
+      0,
+      4030,
+      3,
+      "VAE"
+    ],
+    [
+      80,
+      2031,
+      0,
+      4030,
+      4,
+      "STRING"
+    ],
+    [
+      86,
+      2021,
+      0,
+      3012,
+      10,
+      "LATENT"
+    ],
+    [
+      81,
+      3010,
+      0,
+      4030,
+      5,
+      "INT"
+    ],
+    [
+      82,
+      2021,
+      0,
+      4030,
+      6,
+      "LATENT"
+    ],
+    [
+      87,
+      4030,
+      2,
+      4031,
+      0,
+      "IMAGE"
+    ],
+    [
+      89,
+      401,
+      0,
+      4033,
+      0,
+      "MODEL"
+    ],
+    [
+      90,
+      4033,
+      0,
+      2001,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      398,
+      0,
+      110,
+      0,
+      "CLIP"
+    ],
+    [
+      8,
+      399,
+      0,
+      110,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      400,
+      0,
+      110,
+      2,
+      "VAE"
+    ],
+    [
+      10,
+      2010,
+      0,
+      110,
+      3,
+      "IMAGE"
+    ],
+    [
+      11,
+      2011,
+      0,
+      110,
+      4,
+      "IMAGE"
+    ],
+    [
+      48,
+      2031,
+      0,
+      110,
+      11,
+      "STRING"
+    ],
+    [
+      45,
+      2010,
+      0,
+      2030,
+      0,
+      "IMAGE"
+    ],
+    [
+      46,
+      2011,
+      0,
+      2030,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Context + Load/Save + Chain",
+      "bounding": [
+        2660,
+        -76,
+        540,
+        1284
+      ],
+      "color": "#3f3f6f",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Loaders + pictures",
+      "bounding": [
+        -18,
+        -76,
+        456,
+        1606
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Model",
+      "bounding": [
+        502,
+        -76,
+        456,
+        1042
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Prompt + references",
+      "bounding": [
+        1022,
+        -76,
+        1564,
+        1494
+      ],
+      "color": "#8A8",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Clown Prophecy (the ending)",
+      "bounding": [
+        969.9431111111118,
+        -1973.9813333333213,
+        3096,
+        554
+      ],
+      "color": "#a1309b",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Sampler",
+      "bounding": [
+        3206,
+        -76,
+        768,
+        724
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Decode + save",
+      "bounding": [
+        4042,
+        -76,
+        896,
+        428
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Clown Carryover",
+      "bounding": [
+        969.9431111111118,
+        -2463.981333333322,
+        456,
+        474
+      ],
+      "color": "#a1309b",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8769226950000601,
+      "offset": [
+        -1312.6188933956846,
+        1779.6897900255533
+      ]
+    },
+    "frontendVersion": "1.48.7",
+    "ue_links": [],
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}
